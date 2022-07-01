@@ -12,7 +12,6 @@ Tenga en cuenta que esta query ejecuta varios cursores por lo que se debe realiz
 esclusivos de mantenimiento ya que genera alto impacto en el rendimiento de la base de datos en 
 el momento de la consulta.
 
-Uso Exclusivo Helm Bank.
 *********************************************************************************************/
 
 

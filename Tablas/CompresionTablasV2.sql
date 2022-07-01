@@ -4,9 +4,7 @@ Compresion de tablas superiores a 3 GB v1(2016-08-17)
 (C) 20160921, Henry Troncoso Valencia
 esta Consulta aplica sobre toda la instancia
 **************************************Advertencia.*********************************************
-Esta query Utiliza la metadata de la Base de datos 
-debe ser usada en Horarios no premium
-Uso Exclusivo Helm Bank.
+
 *********************************************************************************************/
 
 IF OBJECT_ID('tempdb..##DBPESOINI') IS NOT NULL

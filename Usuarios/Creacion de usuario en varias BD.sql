@@ -15,7 +15,7 @@ values
 --('ReportesTesoreria_Soporte')
 ----usuarios
 declare @user nvarchar (50) 
-set @user =  'CORPBANCA\hector-martinez' --usuario
+set @user =  'C\hector-martinez' --usuario
 
 DECLARE @max INT --Valor Maximo del While
 DECLARE @min INT --Valor Minimo del While
