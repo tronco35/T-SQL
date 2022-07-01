@@ -1,0 +1,14 @@
+--tamaño estimado de backup comprimido
+ with cte
+ as (
+select
+distinct (Database_name),
+rank () over (PARTITION BY Database_name  order by  backup_start_date desc  ) as rango,
+cast ((compressed_backup_size / 1024) /1024 as int) as TamañoMB, backup_start_date,
+datediff ( minute, s.backup_start_date , s.backup_finish_date) as "Tiempo de Ejecucion de Backup MIN"
+from msdb.dbo.backupset 
+as s inner join msdb.dbo.backupmediafamily as m ON s.media_set_id = m.media_set_id)
+--order by backup_start_date desc
+
+
+select * from CTE where rango = 1

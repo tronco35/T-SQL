@@ -1,0 +1,49 @@
+--BACKUP DATABASE [ClientTrade] TO  DISK = N'\\BOINFSQC4\Backups\ClientTrade.bak' 
+--WITH  COPY_ONLY, NOFORMAT, NOINIT,  NAME = N'ClientTrade-Full Database Backup', SKIP, NOREWIND, NOUNLOAD,  
+--STATS = 10
+--GO
+
+restore FILELISTONLY  FROM DISK = N'\\BOINFSQC4\Backups\ClientTrade.bak' 
+
+restore database [ClientTrade] FROM DISK = N'\\BOINFSQC4\Backups\ClientTrade.bak' 
+WITH
+--MOVE 'JImaging_Data' TO 'E:\DataBase\X_imaging\X_imaging_data.mdf',
+----MOVE 'tmtjtot_Hist_Data01' TO 'F:\DATABASES\DATA\tm61tjtot_Hist_Data01.ndf',
+--MOVE 'JImaging_Log' TO 'E:\DataBase\X_imagingX_imaging_log.ldf',
+FILE = 1, NOUNLOAD, RECOVERY, STATS = 10
+
+
+
+
+--BACKUP DATABASE [X_imaging] TO  DISK = N'\\BOINFSQC4\Backups\X_imaging.bak' 
+--WITH  COPY_ONLY, NOFORMAT, NOINIT,  NAME = N'X_imaging-Full Database Backup', SKIP, NOREWIND, NOUNLOAD, 
+--STATS = 10
+--GO
+
+
+--restore FILELISTONLY  FROM DISK = N'\\BOINFSQC4\Backups\X_imaging.bak' 
+
+restore database [X_imaging] FROM DISK = N'\\BOINFSQC4\Backups\X_imaging.bak' 
+WITH
+MOVE 'JImaging_Data' TO 'E:\DataBase\X_imaging\X_imaging_data.mdf',
+--MOVE 'tmtjtot_Hist_Data01' TO 'F:\DATABASES\DATA\tm61tjtot_Hist_Data01.ndf',
+MOVE 'JImaging_Log' TO 'E:\DataBase\X_imagingX_imaging_log.ldf',
+FILE = 1, NOUNLOAD, RECOVERY, STATS = 10
+
+
+
+--BACKUP DATABASE [ts_management] TO  DISK = N'\\BOINFSQC4\Backups\ts_management.bak' 
+--WITH  COPY_ONLY, NOFORMAT, NOINIT,  NAME = N'ts_management-Full Database Backup', SKIP, NOREWIND, NOUNLOAD, 
+--STATS = 10
+--GO
+
+--restore FILELISTONLY  FROM DISK = N'\\BOINFSQC4\Backups\ts_management.bak' 
+
+restore database [ts_management] FROM DISK = N'\\BOINFSQC4\Backups\ts_management.bak' 
+WITH
+--MOVE 'JImaging_Data' TO 'E:\DataBase\X_imaging\X_imaging_data.mdf',
+----MOVE 'tmtjtot_Hist_Data01' TO 'F:\DATABASES\DATA\tm61tjtot_Hist_Data01.ndf',
+--MOVE 'JImaging_Log' TO 'E:\DataBase\X_imagingX_imaging_log.ldf',
+FILE = 1, NOUNLOAD, RECOVERY, STATS = 10
+
+

@@ -1,0 +1,8 @@
+BACKUP DATABASE [InternetSales] TO  DISK = N'C:\a\fe.bak'
+WITH NOFORMAT, INIT,  NAME = N'fff', SKIP, NOREWIND, NOUNLOAD, 
+COMPRESSION,  STATS = 10,   ENCRYPTION 
+   (
+   ALGORITHM = AES_256,
+   SERVER CERTIFICATE = Security_Certificate2
+   )
+GO

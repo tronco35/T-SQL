@@ -1,0 +1,13 @@
+USE master;  
+GO  
+ALTER DATABASE SerivaNetLimites
+SET SINGLE_USER  
+WITH ROLLBACK IMMEDIATE;  
+GO  
+ALTER DATABASE SerivaNetLimites
+SET offline 
+GO  
+ALTER DATABASE SerivaNetLimites
+SET MULTI_USER;  
+GO  
+  

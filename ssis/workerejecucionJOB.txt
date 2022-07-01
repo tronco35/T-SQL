@@ -1,0 +1,67 @@
+USE [SSISDB]
+GO
+
+SELECT [TaskId]
+      ,[JobId]
+      ,[TaskType]
+      ,[InputData]
+      ,[MaxExecutedCount]
+      ,[ExecutedCount]
+      ,[Status]
+      ,[IsCritical]
+      ,[Priority]
+      ,[ReadyForDispatchTime]
+      ,[LastUpdatedTime]
+      ,[CreatedTime]
+      ,[WorkerAgentId]
+      ,[ExpiredTime]
+      ,[CreateWorkerAgentId]
+      ,[IsCancelled]
+      ,[LastPickupTime]
+  FROM [internal].[tasks]
+  where TaskId =  '9066b5a7-9822-4d9e-832c-1d8884f3a9e2'
+GO
+
+USE [SSISDB]
+GO
+
+SELECT [TaskId]
+      ,[JobId]
+      ,[TaskType]
+      ,[InputData]
+      ,[MaxExecutedCount]
+      ,[ExecutedCount]
+      ,[Status]
+      ,[IsCritical]
+      ,[Priority]
+      ,[ReadyForDispatchTime]
+      ,[LastUpdatedTime]
+      ,[CreatedTime]
+      ,[WorkerAgentId]
+      ,[ExpiredTime]
+      ,[CreateWorkerAgentId]
+      ,[IsCancelled]
+      ,[LastPickupTime]
+  FROM [internal].[tasks]
+  where TaskId =  '9066b5a7-9822-4d9e-832c-1d8884f3a9e2'
+GO
+'2D55D809-E85E-47BD-BD93-5D4BCA2F5F3B'
+
+USE [SSISDB]
+GO
+
+SELECT [WorkerAgentId]
+      ,[DisplayName]
+      ,[Description]
+      ,[MachineName]
+      ,[Tags]
+      ,[UserAccount]
+      ,[IsEnabled]
+      ,[LastOnlineTime]
+  FROM [internal].[worker_agents]
+  where [WorkerAgentId] = '2D55D809-E85E-47BD-BD93-5D4BCA2F5F3B'
+GO
+
+
+
+
